@@ -549,7 +549,7 @@ function Dashboard() {
           </div>
           {/* Chart-Section */}
           <div className="mt-[29px] h-[328px]  flex gap-[31px]   ">
-            <div className="border pl-[25px] pr-[25px] rounded-[10px] bg-[#FFFFFF] pt-[18px] max-w-[1189px] w-full">
+            <div className="border pl-[25px] pb-[21px] pr-[25px] rounded-[10px] bg-[#FFFFFF] pt-[18px] max-w-[1189px] w-full">
               <div className="  font-PlusJakartaSans flex  justify-between items-center mt-[16px]">
                 <div className=" w-[99px] items-center font-[700] text-[16px]">
                   Sales Report
@@ -584,12 +584,11 @@ function Dashboard() {
                   <div className="font-[700] text-gray-900"> Export PDF</div>
                 </button>
               </div>
-              <div className="mt-[30px]  pb-[21px]  ">
+              <div className="mt-[76px]  pb-[21px] h-[228px] w-full">
                 <Line
                   data={LinechartColorData}
                   options={options}
-                  width={"786px"}
-                  height={"228px"}
+                  width={"700px"}
                 />
               </div>
             </div>
