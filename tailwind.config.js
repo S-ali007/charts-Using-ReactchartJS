@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Manrope: [" sans-serif "],
+        Manrope: ['Manrope'],
+        roboto: ['Roboto'],
+        Inter:['Inter'],
+        PlusJakartaSans:['Plus Jakarta Sans'],
       }
-    },
+    }
   },
   plugins: [],
 };

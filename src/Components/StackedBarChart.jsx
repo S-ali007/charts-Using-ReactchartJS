@@ -2,7 +2,7 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 
 function StackedBarChart({ StackedchartData }) {
-  const options = {
+  const Stackoptions = {
     scales: {
       x: {
         grid: {
@@ -191,7 +191,7 @@ function StackedBarChart({ StackedchartData }) {
           </div>
         </div>
       </div>
-      <Bar data={StackedchartData} options={options} />
+      <Bar data={StackedchartData} options={Stackoptions} />
     </div>
   );
 }
