@@ -25,10 +25,10 @@ function StackedBarChart({ StackedchartData }) {
 
   return (
     <div className="px-[64px]">
-      <div className="flex justify-between font-Manrope ">
+      <div className="flex justify-between font-Manrope  ">
         <div>
-          <div className="text-[24px] font-[700px]">Store Metrics</div>
-          <div className="text-[18px] font-[400px] text-[#64748B]">
+          <div className="text-[24px] font-[700]">Store Metrics</div>
+          <div className="text-[18px] font-[400] text-[#64748B]">
             Your current sales summary and activity.
           </div>
         </div>
@@ -37,7 +37,7 @@ function StackedBarChart({ StackedchartData }) {
         </div>
       </div>
 
-      <div className="mt-[32px] border-t-[1px] flex px-[8px] justify-between">
+      <div className="mt-[32px] pt-[32px] border-t-[1px] flex px-[8px] justify-between">
         <div className="flex mt-[32px] gap-[40px] ">
           <div className="flex ">
             <div className="pl-[4px] border-l-[3px]">
@@ -191,7 +191,10 @@ function StackedBarChart({ StackedchartData }) {
           </div>
         </div>
       </div>
-      <Bar data={StackedchartData} options={Stackoptions} />
+      <div className="mt-[68px]">
+        {" "}
+        <Bar data={StackedchartData} options={Stackoptions} />
+      </div>
     </div>
   );
 }

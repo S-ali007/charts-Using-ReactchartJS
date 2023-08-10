@@ -126,6 +126,10 @@ function AllChartsParent() {
         data: Data.flatMap((data) => (data.Cyrpto ? data.Cyrpto : [])),
         borderColor: "#DC2626",
         backgroundColor: "#FEE2E2",
+        pointRadius: [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0],
+        pointBorderColor: "white",
+        pointBackgroundColor: "#DC2626",
+        pointBorderWidth: 11,
         fill: {
           target: "origin",
           above: "#FEE2E2",
@@ -136,8 +140,13 @@ function AllChartsParent() {
         data: Data.flatMap((data) => (data.Credit ? data.Credit : [])),
         borderColor: "#1D4ED8",
         backgroundColor: "#EFF6FF",
+        pointRadius: [0, 10, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0],
+        pointBorderColor: "white",
+        pointBackgroundColor: "#EFF6FF",
+        pointBorderWidth: 11,
         fill: "origin",
       },
+      
     ],
   };
 
