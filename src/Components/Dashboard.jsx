@@ -204,7 +204,7 @@ function Dashboard() {
       </div>
 
       {/* Dashboard Section */}
-      <div className="flex bg-gray-50 gap-[45px]">
+      <div className="flex bg-gray-50 gap-[45px] max-w-[1600px] w-full">
         {/* aside-content */}
         <div className="aside  px-[24px] mt-[36px] max-w-[280px] w-full">
           <div>
@@ -548,8 +548,8 @@ function Dashboard() {
             </div>
           </div>
           {/* Chart-Section */}
-          <div className="mt-[29px] h-[328px]  flex gap-[31px]  ">
-            <div className="max-w-[797px] border pl-[25px] pr-[25px] rounded-[10px] bg-[#FFFFFF] pt-[18px]">
+          <div className="mt-[29px] h-[328px]  flex gap-[31px]   ">
+            <div className="border pl-[25px] pr-[25px] rounded-[10px] bg-[#FFFFFF] pt-[18px] max-w-[1212px] w-full">
               <div className="  font-PlusJakartaSans flex  justify-between items-center mt-[16px]">
                 <div className=" w-[99px] items-center font-[700] text-[16px]">
                   Sales Report
@@ -584,11 +584,11 @@ function Dashboard() {
                   <div className="font-[700] text-gray-900"> Export PDF</div>
                 </button>
               </div>
-              <div className="mt-[30px] h-[228px] pb-[21px] ">
+              <div className="mt-[30px]  pb-[21px]  ">
                 <Line
                   data={LinechartColorData}
                   options={options}
-                  width={"748px"}
+                  width={"786px"}
                   height={"228px"}
                 />
               </div>
