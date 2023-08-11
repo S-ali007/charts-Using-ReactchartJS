@@ -205,7 +205,7 @@ function AllChartsParent() {
         <LineChart LinechartData={LinechartData} />
       </div>
       <div className="mt-[200px] ">
-        <LineChartColor LinechartColorData={LinechartColorData} options={options} text={"Make changes with confidence "} />
+        <LineChartColor LinechartColorData={LinechartColorData} options={options} text={"Task Summary"}  />
       </div>
       {/* <div>
         <h1>Pie Chart</h1>

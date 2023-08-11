@@ -79,9 +79,9 @@ function Dashboard() {
     tension: 0.4,
   };
   return (
-    <div className="font-PlusJakartaSans">
+    <div className="font-PlusJakartaSans mx-auto">
       {/* Header */}
-      <div className="flex items-center  justify-between pl-[16px] pr-[66px] bg-[#FFF]  border-b-[1px] border-[#E4E4E7] py-[10px]">
+      <div className="flex items-center  justify-between pl-[44px] pr-[66px]  bg-[#FFF]  border-b-[1px] border-[#E4E4E7] py-[10px] ">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -197,18 +197,17 @@ function Dashboard() {
               />
             </svg>
           </div>
-          <div>
-            <img src="/assets/navbar profile imge.svg" alt="" />
-          </div>
+
+          <img src="/assets/navbar profile imge.svg" alt="" />
         </div>
       </div>
 
       {/* Dashboard Section */}
-      <div className="flex bg-gray-50 gap-[45px] max-w-[1600px] w-full">
+      <div className="flex bg-gray-50 max-w-[1600px] w-full  gap-[43px] pb-[43px] ">
         {/* aside-content */}
-        <div className="aside  px-[24px] mt-[36px] max-w-[280px] w-full">
-          <div>
-            <button className="bg-[#4F46E5]  gap-[10px] flex justify-center items-center p-[16px] rounded-[10px] text-white  font-PlusJakartaSans">
+        <div className="aside  px-[24px] pt-[36px] max-w-[280px] w-full ">
+          <button className="bg-[#4F46E5] gap-[10px]   flex  items-center p-[16px] rounded-[10px] text-white  font-PlusJakartaSans">
+            <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"
@@ -224,9 +223,11 @@ function Dashboard() {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div>Connect New Account</div>
-            </button>
-          </div>
+            </div>
+            <div className="max-w-[143px] w-full text-[13px] font-[700] font-PlusJakartaSans ">
+              Connect New Account
+            </div>
+          </button>
           <div className="flex  items-center mt-[30px] gap-[13px] font-PlusJakartaSans font-[500] text-[13px] leading-[21px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +244,7 @@ function Dashboard() {
                 stroke-linejoin="round"
               />
             </svg>
-            <h1>Dashboard</h1>
+            <h1 className="">Dashboard</h1>
           </div>
           <div className="flex  items-center mt-[30px] gap-[13px] font-PlusJakartaSans font-[500] text-[#A1A1AA] uppercase text-[11px] leading-[21px]">
             <h1>Analytics</h1>
@@ -432,16 +433,16 @@ function Dashboard() {
           </div>
         </div>
         {/* main inner */}
-        <div className="mt-[33px] max-w-[1212px] w-full">
+        <div className="mt-[33px] max-w-[1212px] w-full ">
           <div className="flex gap-[8px]">
-            <h1 className="font-[700] text-[16px] ">Hey Mariana -</h1>
+            <span className="font-[700] text-[16px] ">Hey Mariana -</span>
             <p className="text-gray-500">
               here’s what’s happening with your store today
             </p>
           </div>
           <div>
-            <div className="flex  mt-[32px]   justify-between">
-              <div className=" max-w-[279px] w-full p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
+            <div className="grid  grid-cols-4 mt-[32px]  gap-[25px]  ">
+              <div className=" p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
                 <div className="text-[#71717A] font-[500]">Today’s Sale</div>
                 <div className="flex  justify-between   mt-[11px]  ">
                   <div className="text-[21px] text-[#18181B] font-[700] ">
@@ -467,7 +468,7 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className=" max-w-[279px] w-full p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
+              <div className="  p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
                 <div className="text-[#71717A] font-[500]">Today’s Sale</div>
                 <div className="flex  justify-between   mt-[11px]  ">
                   <div className="text-[21px] text-[#18181B] font-[700] ">
@@ -493,7 +494,7 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className=" max-w-[279px] w-full p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
+              <div className=" p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
                 <div className="text-[#71717A] font-[500]">Today’s Sale</div>
                 <div className="flex  justify-between   mt-[11px]  ">
                   <div className="text-[21px] text-[#18181B] font-[700] ">
@@ -519,7 +520,7 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className=" max-w-[279px] w-full p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
+              <div className="  p-[15px] border-gray-200 border-[1px] rounded-[10px] bg-[#FFFFFF]  ">
                 <div className="text-[#71717A] font-[500]">Today’s Sale</div>
                 <div className="flex  justify-between   mt-[11px]  ">
                   <div className="text-[21px] text-[#18181B] font-[700] ">
@@ -548,8 +549,8 @@ function Dashboard() {
             </div>
           </div>
           {/* Chart-Section */}
-          <div className="mt-[29px] h-[328px]  flex gap-[31px]   ">
-            <div className="border pl-[25px] pb-[21px] pr-[25px] rounded-[10px] bg-[#FFFFFF] pt-[18px] max-w-[1189px] w-full">
+          <div className="mt-[29px]  flex gap-[31px]   ">
+            <div className="border pl-[25px] pb-[21px] pr-[17px] rounded-[10px] bg-[#FFFFFF] pt-[18px] max-w-[1189px] w-full">
               <div className="  font-PlusJakartaSans flex  justify-between items-center mt-[16px]">
                 <div className=" w-[99px] items-center font-[700] text-[16px]">
                   Sales Report
@@ -584,7 +585,7 @@ function Dashboard() {
                   <div className="font-[700] text-gray-900"> Export PDF</div>
                 </button>
               </div>
-              <div className="mt-[76px]  pb-[21px] h-[228px] w-full">
+              <div className="mt-[76px]    ">
                 <Line
                   data={LinechartColorData}
                   options={options}
@@ -592,9 +593,9 @@ function Dashboard() {
                 />
               </div>
             </div>
-            <div className="max-w-[383px] w-full  border pl-[27px] pr-[22px] rounded-[10px] bg-[#FFFFFF]">
-              <div className="  font-PlusJakartaSans flex  justify-between items-center mt-[16px]">
-                <div className=" items-center font-[700] text-[16px]">
+            <div className="max-w-[383px] w-full   border pl-[27px] pr-[22px] rounded-[10px] bg-[#FFFFFF]">
+              <div className="  font-PlusJakartaSans flex  justify-between items-center mt-[16px] ">
+                <div className=" items-center font-[700] text-[16px] shrink-0">
                   Traffic Sources
                 </div>
 
@@ -611,20 +612,20 @@ function Dashboard() {
               </div>
               <div className="mt-[39px]">
                 <div>
-                  <div className="flex justify-between items-center font-PlusJakartaSans  w-full font-[500] ">
-                    <h1 className=" max-w-[39px] ">Direct</h1>
-                    <h1 className="max-w-[70px] ">1,43,382</h1>
+                  <div className="flex justify-between items-center font-PlusJakartaSans font-[500] ">
+                    <h1 className=" ">Direct</h1>
+                    <h1 className="">1,43,382</h1>
                   </div>
-                  <div className=" max-w-[332px] w-full mt-[8px] bg-gray-100 rounded-[5px]">
+                  <div className=" mt-[8px] bg-gray-100 rounded-[5px]">
                     <div className="bg-[#4F46E5] w-[80%] h-[5px] rounded-[5px] "></div>
                   </div>
                   <div className="mt-[24px]">
                     <div>
                       <div className="flex justify-between items-center font-PlusJakartaSans  w-full font-[500] ">
-                        <h1 className=" max-w-[39px] ">Referral</h1>
-                        <h1 className="max-w-[70px] ">87,974</h1>
+                        <h1 className="">Referral</h1>
+                        <h1 className=" ">87,974</h1>
                       </div>
-                      <div className=" max-w-[332px] w-full mt-[8px] bg-gray-100 rounded-[5px]">
+                      <div className="  mt-[8px] bg-gray-100 rounded-[5px]">
                         <div className="bg-[#4F46E5] w-[60%] h-[5px] rounded-[5px]"></div>
                       </div>
                     </div>
@@ -633,20 +634,20 @@ function Dashboard() {
                     <div>
                       <div className="flex justify-between items-center font-PlusJakartaSans  w-full font-[500] ">
                         <h1 className="  ">Social Media</h1>
-                        <h1 className="max-w-[70px] ">1,43,382</h1>
+                        <h1 className="">1,43,382</h1>
                       </div>
-                      <div className=" max-w-[332px] w-full mt-[8px] bg-gray-100 rounded-[5px]">
+                      <div className=" mt-[8px] bg-gray-100 rounded-[5px]">
                         <div className="bg-[#4F46E5] w-[40%] h-[5px] rounded-[5px]"></div>
                       </div>
                     </div>
                   </div>
                   <div className="mt-[24px]">
                     <div>
-                      <div className="flex justify-between items-center font-PlusJakartaSans  w-full font-[500] ">
-                        <h1 className=" max-w-[39px] ">Direct</h1>
+                      <div className="flex justify-between items-center font-PlusJakartaSans  font-[500] ">
+                        <h1 className="  ">Direct</h1>
                         <h1 className=" ">1,43,382</h1>
                       </div>
-                      <div className=" max-w-[332px] w-full mt-[8px] bg-gray-100 rounded-[5px]">
+                      <div className="  mt-[8px] bg-gray-100 rounded-[5px]">
                         <div className="bg-[#4F46E5] w-[20%] h-[5px] rounded-[5px]"></div>
                       </div>
                     </div>
@@ -657,7 +658,7 @@ function Dashboard() {
           </div>
           {/* Transactions-Section */}
           <div className="flex mt-[29px] gap-[31px] max-w-[1212px] w-full">
-            <div className="max-w-[798px ] w-full  border  rounded-[10px] bg-[#FFFFFF]">
+            <div className="w-[798px ] w-full  border  rounded-[10px] bg-[#FFFFFF]">
               <div className="flex justify-between mt-[18px] pl-[25px] pr-[20px]">
                 <div>
                   <h1 className="text-[#18181B] text-[16px] font-[700]">
@@ -693,7 +694,7 @@ function Dashboard() {
               </div>
 
               <div className="mt-[31px] ">
-                <div className="flex justify-between items-center  font-PlusJakartaSans pb-[20px] pl-[25px] pr-[20px]">
+                <div className="flex justify-between items-center  font-PlusJakartaSans pb-[19px] pl-[25px] pr-[20px]">
                   <div className="flex items-center rounded-[40px] bg-[#DCFCE7] pt-[2px] pb-[4px] pr-[11px] pl-[9px]  gap-[8px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -744,7 +745,7 @@ function Dashboard() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex justify-between items-center  font-PlusJakartaSans py-[20px] border-y pl-[25px] pr-[20px]">
+                <div className="flex justify-between items-center  font-PlusJakartaSans py-[19px] border-y pl-[25px] pr-[20px]">
                   <div className="flex items-center rounded-[40px] bg-[#DCFCE7] pt-[2px] pb-[4px] pr-[11px] pl-[9px]  gap-[8px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -795,7 +796,7 @@ function Dashboard() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex justify-between items-center  font-PlusJakartaSans py-[20px] border-y pl-[25px] pr-[20px]">
+                <div className="flex justify-between items-center  font-PlusJakartaSans py-[19px] border-y pl-[25px] pr-[20px]">
                   <div className="flex items-center rounded-[40px] bg-[#FEF9C3] pt-[2px] pb-[4px] pr-[11px] pl-[9px]  gap-[8px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -846,7 +847,7 @@ function Dashboard() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex justify-between items-center  font-PlusJakartaSans py-[20px] border-y pl-[25px] pr-[20px] pb-[20px]">
+                <div className="flex justify-between items-center  font-PlusJakartaSans py-[19px] border-y pl-[25px] pr-[20px] pb-[20px]">
                   <div className="flex items-center rounded-[40px] bg-[#FEE2E2] pt-[2px] pb-[4px] pr-[11px] pl-[9px]  gap-[8px]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -899,7 +900,9 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="max-w-[383px] w-full  border pt-[18px] pl-[27px] pr-[24px] rounded-[10px] bg-[#FFFFFF]">
+            {/* Recent Customer Div */}
+
+            <div className="max-w-[383px] w-full  border pb-[24px]  pt-[18px] pl-[27px] pr-[24px] rounded-[10px] bg-[#FFFFFF]">
               <div>
                 <h1 className="text-[#18181B] text-[16px] font-[700]">
                   Recent Customers
@@ -908,94 +911,97 @@ function Dashboard() {
                   Lorem ipsum dolor sit ametis.{" "}
                 </p>
               </div>
-              <div className="mt-[28px]">
-                <div className="flex gap-[82px]">
-                  <div className="flex gap-[13px]">
-                    <img src="/assets/recent_Customer1.svg" alt="" />
-                    <div className="">
+              <div className="flex flex-col gap-[22px] mt-[29px]">
+                <div className="">
+                  <div className="flex gap-[82px]">
+                    <div className="flex gap-[13px]">
+                      <img src="/assets/recent_Customer1.svg" alt="" />
+                      <div className="">
+                        <h1 className="text-[#18181B] text-[13px] font-[700]">
+                          Jenny Wilson
+                        </h1>
+                        <h1 className="text-[#71717A] mt-[3]">
+                          w.lawson@example.com
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div>
                       <h1 className="text-[#18181B] text-[13px] font-[700]">
-                        Jenny Wilson
+                        $11,234
                       </h1>
-                      <h1 className="text-[#71717A] mt-[3]">
-                        w.lawson@example.com
-                      </h1>
+                      <h1 className="text-[#71717A] mt-[3]">Austin</h1>
                     </div>
                   </div>
+                </div>
+                <div className="">
+                  <div className="flex gap-[82px]">
+                    <div className="flex gap-[13px]">
+                      <img src="/assets/recent_Customer2.svg" alt="" />
+                      <div className="">
+                        <h1 className="text-[#18181B] text-[13px] font-[700]">
+                          Jenny Wilson
+                        </h1>
+                        <h1 className="text-[#71717A] mt-[3]">
+                          w.lawson@example.com
+                        </h1>
+                      </div>
+                    </div>
 
-                  <div>
-                    <h1 className="text-[#18181B] text-[13px] font-[700]">
-                      $11,234
-                    </h1>
-                    <h1 className="text-[#71717A] mt-[3]">Austin</h1>
+                    <div>
+                      <h1 className="text-[#18181B] text-[13px] font-[700]">
+                        $11,234
+                      </h1>
+                      <h1 className="text-[#71717A] mt-[3]">Austin</h1>
+                    </div>
+                  </div>
+                </div>
+                <div className="">
+                  <div className="flex gap-[82px]">
+                    <div className="flex gap-[13px]">
+                      <img src="/assets/recent_Customer3.svg" alt="" />
+                      <div className="">
+                        <h1 className="text-[#18181B] text-[13px] font-[700]">
+                          Jenny Wilson
+                        </h1>
+                        <h1 className="text-[#71717A] mt-[3]">
+                          w.lawson@example.com
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h1 className="text-[#18181B] text-[13px] font-[700]">
+                        $11,234
+                      </h1>
+                      <h1 className="text-[#71717A] mt-[3]">Austin</h1>
+                    </div>
+                  </div>
+                </div>
+                <div className="">
+                  <div className="flex gap-[82px]">
+                    <div className="flex gap-[13px]">
+                      <img src="/assets/recent_Customer4.svg" alt="" />
+                      <div className="">
+                        <h1 className="text-[#18181B] text-[13px] font-[700]">
+                          Jenny Wilson
+                        </h1>
+                        <h1 className="text-[#71717A] mt-[3]">
+                          w.lawson@example.com
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h1 className="text-[#18181B] text-[13px] font-[700]">
+                        $11,234
+                      </h1>
+                      <h1 className="text-[#71717A] mt-[3]">Austin</h1>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="mt-[28px]">
-                <div className="flex gap-[82px]">
-                  <div className="flex gap-[13px]">
-                    <img src="/assets/recent_Customer2.svg" alt="" />
-                    <div className="">
-                      <h1 className="text-[#18181B] text-[13px] font-[700]">
-                        Jenny Wilson
-                      </h1>
-                      <h1 className="text-[#71717A] mt-[3]">
-                        w.lawson@example.com
-                      </h1>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h1 className="text-[#18181B] text-[13px] font-[700]">
-                      $11,234
-                    </h1>
-                    <h1 className="text-[#71717A] mt-[3]">Austin</h1>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-[22px]">
-                <div className="flex gap-[82px]">
-                  <div className="flex gap-[13px]">
-                    <img src="/assets/recent_Customer3.svg" alt="" />
-                    <div className="">
-                      <h1 className="text-[#18181B] text-[13px] font-[700]">
-                        Jenny Wilson
-                      </h1>
-                      <h1 className="text-[#71717A] mt-[3]">
-                        w.lawson@example.com
-                      </h1>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h1 className="text-[#18181B] text-[13px] font-[700]">
-                      $11,234
-                    </h1>
-                    <h1 className="text-[#71717A] mt-[3]">Austin</h1>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-[22px]">
-                <div className="flex gap-[82px]">
-                  <div className="flex gap-[13px]">
-                    <img src="/assets/recent_Customer4.svg" alt="" />
-                    <div className="">
-                      <h1 className="text-[#18181B] text-[13px] font-[700]">
-                        Jenny Wilson
-                      </h1>
-                      <h1 className="text-[#71717A] mt-[3]">
-                        w.lawson@example.com
-                      </h1>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h1 className="text-[#18181B] text-[13px] font-[700]">
-                      $11,234
-                    </h1>
-                    <h1 className="text-[#71717A] mt-[3]">Austin</h1>
-                  </div>
-                </div>
-              </div>
+              
               <button className="flex items-center gap-[8px] mt-[27px]">
                 <p className="text-[#151518] text-[12px]">
                   {" "}

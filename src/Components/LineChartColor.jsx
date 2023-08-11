@@ -11,7 +11,7 @@ function LineChartColor({LinechartColorData,options, extraClasses,text}) {
           <div>
             <div
           
-            className="text-[20px] font-[600px]  ">{text}</div>
+            className="text-[20px] font-[600]  ">{text}</div>
           </div>
           <div className="flex gap-[16px] items-center mt-[16px]">
             {" "}
