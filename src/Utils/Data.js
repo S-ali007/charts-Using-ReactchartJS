@@ -8,6 +8,8 @@ export const Data = [
       Cash:20,
       Cyrpto:18,
       Month:"Jan",
+      Department: "HR"
+    
     },
     {
       id: 2,
@@ -17,7 +19,9 @@ export const Data = [
       Credit:20,
       Cash:25,
       Cyrpto:23,
-      Month:"Feb"
+      Month:"Feb",
+      Department: "Marketing"
+
     },
     {
       id: 3,
@@ -27,7 +31,8 @@ export const Data = [
       Credit:20,
       Cash:45,
       Cyrpto:15 ,
-      Month:"March"
+      Month:"March",
+      Department: "Finance"
     },
     {
       id: 4,
@@ -38,6 +43,7 @@ export const Data = [
       Cash:20,
       Cyrpto:25,
       Month:"April",
+      Department: "Operations"
     },
     {
       id: 5,
@@ -47,7 +53,7 @@ export const Data = [
       Credit:29,
       Cash:23,
       Cyrpto:53,
-      Month:"May"
+      Month:"May",
     },
     {
       id: 6,
@@ -68,6 +74,7 @@ export const Data = [
       Cash:34,
       Cyrpto:55,
       Month:"July"
+
     }
     ,
     {

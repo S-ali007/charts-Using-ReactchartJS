@@ -5,7 +5,8 @@ import StackedBarChart from "./StackedBarChart";
 import HorizonatolBartChart from "./HorizonatolBartChart";
 import LineChart from "./LineChart";
 import LineChartColor from "./LineChartColor";
-
+import DoughnutChart from "./DoughnutChart";
+import { type } from "@testing-library/user-event/dist/type";
 function AllChartsParent() {
   const chartData = {
     labels: Data.flatMap((data) => (data.Day ? data.Day : [])),
@@ -101,19 +102,16 @@ function AllChartsParent() {
         label: "Product-1",
         data: Data.flatMap((data) => (data.Cyrpto ? data.Cyrpto : [])),
         borderColor: "#165BAA",
-    
       },
       {
         label: "Product-2",
         data: Data.flatMap((data) => (data.Credit ? data.Credit : [])),
         borderColor: "#A155B9",
-      
       },
       {
         label: "Product-3",
         data: Data.flatMap((data) => (data.Cash ? data.Cash : [])),
         borderColor: "#F765A3",
-     
       },
     ],
   };
@@ -140,54 +138,107 @@ function AllChartsParent() {
         data: Data.flatMap((data) => (data.Credit ? data.Credit : [])),
         borderColor: "#1D4ED8",
         backgroundColor: "#EFF6FF",
-        pointRadius: [0, 10, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0],
+        pointRadius: [0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         pointBorderColor: "white",
         pointBackgroundColor: "#EFF6FF",
         pointBorderWidth: 11,
         fill: "origin",
       },
-      
     ],
   };
 
-      const options = {
-        indexAxis: "x",
-        elements: {
-          bar: {
-            borderWidth: 1,
-          },
+  const DoughnutchartData = {
+    labels: Data.flatMap((data) => (data.Department ? data.Department : [])),
+
+  datasets: [
+
+   
+    { 
+      label:"HR",
+      data: [1],
+      backgroundColor: ["#1D4ED8"],
+      borderWidth: 5,
+      circumference:275,
+      borderRadius: 10,
+
+    },
+    { 
+      label:"Marketing",
+      data: [0,4],
+      backgroundColor: ["#EC4899"],
+      borderWidth: 5,
+      circumference:180,
+      borderRadius: 10,
+
+
+    },
+    { 
+      label:"Finance",
+      data: [0,0,3],
+      backgroundColor: ["#6366F1"],
+      borderWidth: 5,
+      circumference:250,
+      borderRadius: 10,
+
+
+    },
+    { 
+      label:"Operations",
+      data: [0,0,0,4],
+      backgroundColor: ["#EAB308"],
+      borderWidth: 5,
+      circumference:120,
+      borderRadius: 10,
+      
+
+      
+
+    },
+   
+      
+  ],
+
+   
+}
+
+console.log(DoughnutchartData)
+
+  const options = {
+    indexAxis: "x",
+    elements: {
+      bar: {
+        borderWidth: 1,
+      },
+    },
+
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100,
+        min: 0,
+
+        ticks: {
+          stepSize: 20,
         },
-    
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100,
-            min: 0,
-        
-            ticks: {
-              stepSize: 20,
-             
-            },
-            grid: {
-              display: false,
-            },
-          },
-        
-          x: {
-            grid: {
-              display: false,
-            },
-          },
-       
+        grid: {
+          display: false,
         },
-    
-        plugins: {
-          legend: {
-            position: "bottom",
-          },
-       
+      },
+
+      x: {
+        grid: {
+          display: false,
         },
-        tension: 0.4 };
+      },
+    },
+
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    tension: 0.4,
+  };
 
   return (
     <>
@@ -205,12 +256,15 @@ function AllChartsParent() {
         <LineChart LinechartData={LinechartData} />
       </div>
       <div className="mt-[200px] ">
-        <LineChartColor LinechartColorData={LinechartColorData} options={options} text={"Task Summary"}  />
+        <LineChartColor
+          LinechartColorData={LinechartColorData}
+          options={options}
+          text={"Task Summary"}
+        />
       </div>
-      {/* <div>
-        <h1>Pie Chart</h1>
-        <PieChart chartData={chartData} />
-      </div> */}
+      <div className="mt-[200px] ">
+        <DoughnutChart DoughnutchartData={DoughnutchartData} />
+      </div>
     </>
   );
 }
