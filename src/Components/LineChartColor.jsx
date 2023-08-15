@@ -2,16 +2,55 @@ import { FOCUSABLE_SELECTOR } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import { Line } from "react-chartjs-2";
 
-function LineChartColor({LinechartColorData,options, extraClasses,text}) {
+function LineChartColor({ LinechartColorData, extraClasses, text }) {
+
+  const options = {
+    indexAxis: "x",
+    elements: {
+      bar: {
+        borderWidth: 1,
+      },
+    },
+
+    scales: {
+      y: {
+        border: {
+          display: false,
+        },
+        beginAtZero: false,
+        max: 100,
+        min: 50,
+
+        ticks: {
+          stepSize: 10,
+        },
+        grid: {
+          display: false,
+        },
+      },
+
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+    },
+
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  
+    tension: 0.4,
+  };
 
   return (
     <div>
       <div className={`mx-auto  max-w-[882px] w-full ${extraClasses} `}>
         <div className="  pb-[27px] border-b-[2px]  ">
           <div>
-            <div
-          
-            className="text-[20px] font-[600]  ">{text}</div>
+            <div className="text-[20px] font-[600]  ">{text}</div>
           </div>
           <div className="flex gap-[16px] items-center mt-[16px]">
             {" "}
@@ -48,10 +87,8 @@ function LineChartColor({LinechartColorData,options, extraClasses,text}) {
           </div>
         </div>
 
-
         <div className=" pt-[29px]">
-            <Line data={LinechartColorData} options={options}  />
-
+          <Line data={LinechartColorData} options={options} />
         </div>
       </div>
     </div>

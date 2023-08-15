@@ -5,16 +5,28 @@ import SalesActivitesRightSide from "./SalesActivitesRightSide";
 
 const BarChart = ({ chartData }) => {
   const LineChartOptions = {
-    indexAxis: "x",
-
     scales: {
-      y: {
-        beginAtZero: true,
+      x: {
+        
         grid: {
           display: false,
+          drawOnChartArea	:true
         },
       },
-      x: {
+      y: {
+        beginAtZero:{
+          
+        },
+        border:{
+          display:false
+        },
+
+        ticks: {
+          callback: function (value, index, ticks) {
+            return value + " % ";
+          },
+        },
+
         grid: {
           display: false,
         },
@@ -27,24 +39,26 @@ const BarChart = ({ chartData }) => {
     },
     barPercentage: 1,
     categoryPercentage: 0.2,
+    display:false,
     max: 100,
     min: 20,
+
     ticks: {
       stepSize: 20,
+
     },
-    
   };
 
   return (
-    <div className="flex gap-[28px] ">
-      <div className="max-w-[609px] w-full h-[455px] ">
+    <div className="flex gap-[28px] pb-[28px] ">
+      <div className="max-w-[609px] w-full mt-[28px] ">
         <span className="text-[30px] font-bold "> Sales Activites</span>
-        <div className=" max-w-[609px] w-full h-[455px] mt-[28px]">
+        <div className="  mt-[28px]">
           <Bar
             data={chartData}
             options={LineChartOptions}
-            height={"455px"}
-            width={"609px"}
+            height={"475px"}
+            width={"690px"}
           />
         </div>
       </div>

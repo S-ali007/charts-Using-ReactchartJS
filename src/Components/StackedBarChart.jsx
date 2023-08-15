@@ -8,18 +8,39 @@ function StackedBarChart({ StackedchartData }) {
         grid: {
           display: false,
         },
+        stacked: true,
+       
+      },
+      y: {
+        border: {
+          display: false,
+        },
+
+        ticks: {
+          callback: function (value, index, ticks) {
+            return " $" + value;
+          },
+        },
+        stacked: true,
+       
       },
     },
     plugins: {
       legend: {
         position: "right",
-        rtl: true,
+        // rtl: true,
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
           padding: 20,
         },
       },
+    },
+    max: 25000,
+    min: 5000,
+
+    ticks: {
+      stepSize: 5000,
     },
   };
 

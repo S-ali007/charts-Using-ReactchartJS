@@ -50,23 +50,44 @@ function AllChartsParent() {
       {
         stack: arbitraryStackKey,
         label: "Crypto",
-        data: Data.map((data) => data.Cyrpto),
+        data: Data.map((data) => data.CyrptoDollar),
         backgroundColor: "#064E3B",
-        borderRadius: 2.5,
+        borderRadius: {
+          topLeft: 4,
+          topRight: 4,
+          bottomLeft: 4,
+          bottomRight: 4,
+        },
+        borderSkipped: false,
+        borderWidth: 0.9,
       },
       {
         stack: arbitraryStackKey,
         label: "Cash",
-        data: Data.map((data) => data.Cash),
+        data: Data.map((data) => data.CashDollar),
         backgroundColor: "#047857",
-        borderRadius: 2.5,
+        borderRadius: {
+          topLeft: 4,
+          topRight: 4,
+          bottomLeft: 4,
+          bottomRight: 4,
+        },
+        borderSkipped: false,
+        borderWidth: 0.9,
       },
       {
         stack: arbitraryStackKey,
         label: "Credit",
-        data: Data.map((data) => data.Credit),
+        data: Data.map((data) => data.CreditDollar),
         backgroundColor: "#6EE7B7",
-        borderRadius: 2.5,
+        borderRadius: {
+          topLeft: 4,
+          topRight: 4,
+          bottomLeft: 4,
+          bottomRight: 4,
+        },
+        borderSkipped: false,
+        borderWidth: 0.9,
       },
     ],
   };
@@ -77,20 +98,23 @@ function AllChartsParent() {
       {
         label: "Product-1",
         data: Data.map((data) => data.Cyrpto),
-        backgroundColor: "#165BAA",
+        backgroundColor: "#FFA5CB",
         borderRadius: 1.5,
+        borderColor: "#F765A3",
       },
       {
         label: "Product-2",
         data: Data.map((data) => data.Credit),
-        backgroundColor: "#A155B9",
+        backgroundColor: "#E697FF",
         borderRadius: 1.5,
+        borderColor: "#A155B9",
       },
       {
         label: "Product-3",
         data: Data.map((data) => data.Cash),
-        backgroundColor: "#F765A3",
+        backgroundColor: "#63ABFD",
         borderRadius: 1.5,
+        borderColor: "#165BAA",
       },
     ],
   };
@@ -121,10 +145,10 @@ function AllChartsParent() {
     datasets: [
       {
         label: "Incompleted Tasks",
-        data: Data.flatMap((data) => (data.Cyrpto ? data.Cyrpto : [])),
+        data: [60, 59, 59, 65, 66, 67, 68, 68, 68, 68, 68, 56],
         borderColor: "#DC2626",
         backgroundColor: "#FEE2E2",
-        pointRadius: [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0],
+        pointRadius: [0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0],
         pointBorderColor: "white",
         pointBackgroundColor: "#DC2626",
         pointBorderWidth: 11,
@@ -135,12 +159,12 @@ function AllChartsParent() {
       },
       {
         label: "Completed Tasks",
-        data: Data.flatMap((data) => (data.Credit ? data.Credit : [])),
+        data: [67, 69, 70, 75, 80, 85, 90, 90, 90, 87, 87, 79],
         borderColor: "#1D4ED8",
         backgroundColor: "#EFF6FF",
-        pointRadius: [0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        pointRadius: [0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0],
         pointBorderColor: "white",
-        pointBackgroundColor: "#EFF6FF",
+        pointBackgroundColor: "#1D4ED8",
         pointBorderWidth: 11,
         fill: "origin",
       },
@@ -150,95 +174,43 @@ function AllChartsParent() {
   const DoughnutchartData = {
     labels: Data.flatMap((data) => (data.Department ? data.Department : [])),
 
-  datasets: [
-
-   
-    { 
-      label:"HR",
-      data: [1],
-      backgroundColor: ["#1D4ED8"],
-      borderWidth: 5,
-      circumference:275,
-      borderRadius: 10,
-
-    },
-    { 
-      label:"Marketing",
-      data: [0,4],
-      backgroundColor: ["#EC4899"],
-      borderWidth: 5,
-      circumference:180,
-      borderRadius: 10,
-
-
-    },
-    { 
-      label:"Finance",
-      data: [0,0,3],
-      backgroundColor: ["#6366F1"],
-      borderWidth: 5,
-      circumference:250,
-      borderRadius: 10,
-
-
-    },
-    { 
-      label:"Operations",
-      data: [0,0,0,4],
-      backgroundColor: ["#EAB308"],
-      borderWidth: 5,
-      circumference:120,
-      borderRadius: 10,
-      
-
-      
-
-    },
-   
-      
-  ],
-
-   
-}
-
-console.log(DoughnutchartData)
-
-  const options = {
-    indexAxis: "x",
-    elements: {
-      bar: {
-        borderWidth: 1,
+    datasets: [
+      {
+        label: "HR",
+        data: [1],
+        backgroundColor: ["#1D4ED8"],
+        borderWidth: 5,
+        circumference: 275,
+        borderRadius: 10,
       },
-    },
-
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100,
-        min: 0,
-
-        ticks: {
-          stepSize: 20,
-        },
-        grid: {
-          display: false,
-        },
+      {
+        label: "Marketing",
+        data: [0, 4],
+        backgroundColor: ["#EC4899"],
+        borderWidth: 5,
+        circumference: 180,
+        borderRadius: 10,
       },
-
-      x: {
-        grid: {
-          display: false,
-        },
+      {
+        label: "Finance",
+        data: [0, 0, 3],
+        backgroundColor: ["#6366F1"],
+        borderWidth: 5,
+        circumference: 250,
+        borderRadius: 10,
       },
-    },
-
-    plugins: {
-      legend: {
-        display: false,
+      {
+        label: "Operations",
+        data: [0, 0, 0, 4],
+        backgroundColor: ["#EAB308"],
+        borderWidth: 5,
+        circumference: 120,
+        borderRadius: 10,
       },
-    },
-    tension: 0.4,
+    ],
   };
+
+  console.log(DoughnutchartData);
 
   return (
     <>
@@ -258,7 +230,6 @@ console.log(DoughnutchartData)
       <div className="mt-[200px] ">
         <LineChartColor
           LinechartColorData={LinechartColorData}
-          options={options}
           text={"Task Summary"}
         />
       </div>

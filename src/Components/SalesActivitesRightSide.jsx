@@ -2,7 +2,7 @@ import React from "react";
 
 function SalesActivitesRightSide() {
   return (
-    <div className="max-w-[304px] w-full flex flex-col gap-[24px] mt-[24px]  ">
+    <div className="flex flex-col gap-[24px] pt-[40px]  ">
       <div className="flex  justify-end   rounded-[4px] text-blue-700 font-[500px]">
        
         <select

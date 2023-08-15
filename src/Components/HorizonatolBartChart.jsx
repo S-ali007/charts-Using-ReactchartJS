@@ -28,11 +28,18 @@ function HorizonatolBartChart({HorizontalchartData}) {
               position: 'bottom',
             },
             title: {
-              display: true,
-              text: 'Horizontal Bar Chart'
+              // display: true,
+              // text: 'Horizontal Bar Chart'
             }},
                   barPercentage: 1,
             categoryPercentage: 1,
+            max: 150,
+            min: 0,
+        
+            ticks: {
+              stepSize: 20,
+        
+            },
       };
 
 
@@ -77,7 +84,7 @@ function HorizonatolBartChart({HorizontalchartData}) {
       </div>
 
     {/* section for   horizontal Chart */}
-      <div >
+      <div className="mt-[18px]">
       <Bar data={HorizontalchartData} options={options} />
       </div>
     </div>
